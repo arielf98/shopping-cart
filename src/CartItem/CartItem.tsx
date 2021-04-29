@@ -17,19 +17,21 @@ const CartItem: React.FC<Props> = ({item, addToCart, removeFromCart}) => (
     <Wrapper>
         <div>
             <h3> {item.title} </h3>
+            
             <div className="information">
                 <p> Price: ${item.price} </p>
                 <p> Total: ${(item.amount * item.price).toFixed(2)} </p>
             </div>
-            <div className="button">
+
+            <div className="buttons">
                 <Button
                 size="small" 
                 disableElevation
                 variant="contained"
                 onClick={() => removeFromCart(item.id)}> - </Button>
-            </div>
+           
             <p>{item.amount}</p>
-            <div className="button">
+           
                 <Button
                     size="small"
                     disableElevation
